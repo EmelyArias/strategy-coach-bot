@@ -28,7 +28,7 @@ if st.button("Generate Strategy Advice"):
         prompt = f"You are a helpful business strategy coach. The user wants help with: {task}. Here is their description: {user_input}. Provide clear, structured advice."
 
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo",  # <- Updated here
             messages=[
                 {"role": "system", "content": "You are a business strategy advisor."},
                 {"role": "user", "content": prompt}
